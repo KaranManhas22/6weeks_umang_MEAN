@@ -25,5 +25,6 @@ jobs:
             git pull origin main
             sudo npm i
             sudo npm run build
-            pm2 delete "6weeks_umang_MEAN"
-            pm2 start npm --name "6weeks_umang_MEAN" -- run dev || pm2 restart "6weeks_umang_MEAN"
+            pm2 delete "6weeks_umang_MEAN" 
+            sudo npm i http-server -g
+            pm2 start http-server --name "6weeks_umang_MEAN" -- dist/front-end -p 4200 || pm2 restart "6weeks_umang_MEAN"
