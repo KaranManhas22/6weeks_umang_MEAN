@@ -21,7 +21,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd /home/umang30/6weeks_umang_MEAN
+            cd /home/umang30/6weeks_umang_MEAN/dist/front-end
             git pull origin main
             sudo npm i
             sudo npm run build
