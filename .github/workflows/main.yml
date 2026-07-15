@@ -27,4 +27,5 @@ jobs:
             sudo npm run build
             pm2 delete "6weeks_umang_MEAN" 
             sudo npm i http-server -g
-            pm2 start http-server --name "6weeks_umang_MEAN" -- dist/front-end -p 4200 || pm2 save 
+            cd dist/front-end/
+            pm2 start --name "Frontend" http-server -- -p 4200 -d false || pm2 save 
